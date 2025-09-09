@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón de Nombre Aleatorio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #D8BFD8;
+        }
+        button {
+            position: absolute;
+            bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #nombre {
+            font-size: 144px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="nombre">Haz clic en el botón para mostrar un nombre</div>
+    <button onclick="mostrarNombreAleatorio()">Mostrar Nombre</button>
+
+    <script>
+        const nombres = ["Ángela", "Jorge", "Elsa", "Antonio", "Aarón García", "Ara", "Laura", "Aarón de los Santos", "Marta", "Sara", "Sara María", "Diego Palacios", "Diego Vera", "Tracy", "Luis", "Iker", "Adrián", "Habib"];
+
+        function mostrarNombreAleatorio() {
+            const indiceAleatorio = Math.floor(Math.random() * nombres.length);
+            const nombreAleatorio = nombres[indiceAleatorio];
+            document.getElementById('nombre').textContent = nombreAleatorio;
+        }
+    </script>
+</body>
+</html>
